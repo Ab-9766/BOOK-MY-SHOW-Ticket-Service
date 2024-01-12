@@ -16,4 +16,6 @@ public class City extends BaseModel{
     @OneToMany(mappedBy = "City")
     List<Theatre> theatres;
 
+
+
 }

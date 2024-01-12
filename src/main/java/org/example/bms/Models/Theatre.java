@@ -1,6 +1,7 @@
 package org.example.bms.Models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -18,7 +19,7 @@ public class Theatre extends BaseModel{
     @ManyToOne
     private City city;
 
-    @OneToMany(mappedBy = "Theatre")
+    @OneToMany (mappedBy = "Theatre")
     List<Auditorium> auditoriums;
 
 

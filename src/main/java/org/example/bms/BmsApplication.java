@@ -1,5 +1,7 @@
 package org.example.bms;
 
+import org.example.bms.Controllers.TicketController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

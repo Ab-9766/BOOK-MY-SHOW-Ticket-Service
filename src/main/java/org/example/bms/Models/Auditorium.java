@@ -21,7 +21,13 @@ public class Auditorium extends BaseModel{
 
     @ElementCollection
     @Enumerated(EnumType.ORDINAL)
-    List<Features> supportedFeatures;
+    private List<Features> supportedFeatures;
+
+    @OneToMany(mappedBy= "Auditorium")
+    private List<Seat> seats;
+
+    @OneToMany(mappedBy = "Auditorium")
+    private List<MovieShow> shows;
 
 
 
