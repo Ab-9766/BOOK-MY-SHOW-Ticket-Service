@@ -59,13 +59,13 @@ public class TicketService {
         //yes-Lock seats, make dummy ticket and return
         //No- Throw an exception
 
-        List<SeatInShow> seats= SeatInShowRepository.fetchByIDs(seatInShowIDs);
+        List<SeatInShow> seats= seatInShowRepository.findAllById(seatInShowIDs);
         for(SeatInShow seat: seats){
             if(IsAvailable(seat)==false){
                 throw new SeatNotAvailableException();
             }
         }
-        Optional<User> userOptional= userRepository.fecthByID(userId);
+        Optional<User> userOptional= userRepository.findById(userId);
         if(userOptional.isEmpty()){
             throw new UserNotFoundException();
         }
